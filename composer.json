@@ -1,0 +1,49 @@
+{
+    "name": "rayblair/filesystem",
+    "description": "",
+    "keywords": [
+        "rayblair",
+        "filesystem"
+    ],
+    "homepage": "https://github.com/rayblair/filesystem",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ray Blair",
+            "email": "rayblair06@hotmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rayblair\\Filesystem\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rayblair\\Filesystem\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rayblair\\Filesystem\\FilesystemServiceProvider"
+            ]
+        }
+    }
+}

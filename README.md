@@ -34,7 +34,7 @@ Update `composer.json` with the following:
 ```
 "require": {
         ...
-        "rayblair/filesystem": "0.1.0"
+        "rayblair/filesystem": "0.2.0"
     },
     "repositories": [
         ...

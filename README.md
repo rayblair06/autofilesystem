@@ -1,4 +1,4 @@
-# Auto Filesystem
+# Filesystem
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/rayblair/Filesystem.svg?style=flat-square)](https://packagist.org/packages/rayblair/Filesystem)
 [![Build Status](https://img.shields.io/travis/rayblair/Filesystem/master.svg?style=flat-square)](https://travis-ci.org/rayblair/Filesystem)
@@ -34,7 +34,7 @@ Update `composer.json` with the following:
 ```
 "require": {
         ...
-        "rayblair/filesystem": "*"
+        "rayblair/filesystem": "0.1.0"
     },
     "repositories": [
         ...

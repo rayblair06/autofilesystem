@@ -2,6 +2,7 @@
 
 namespace Rayblair\Filesystem;
 
+use Exception;
 use Illuminate\Support\ServiceProvider;
 use Rayblair\Filesystem\Commands\MoveToDisk;
 use Illuminate\Contracts\Filesystem\Filesystem;
@@ -124,7 +125,13 @@ class FilesystemServiceProvider extends ServiceProvider
     private function extendFilesystem(string $disk)
     {
         $this->app->extend(Filesystem::class, function ($service, $app) use ($disk) {
-            return new ExtendFilesystem($service, $disk);
+            $decorator_class = config('rb-filesystem.extend_filesystem_class');
+
+            if (!class_exists($decorator_class)) {
+                throw new Exception("Decorator Class: {$decorator_class} doesn't exist.");
+            }
+            
+            return new $decorator_class($service, $disk);
         });
     }
 }
